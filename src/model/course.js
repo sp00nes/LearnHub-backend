@@ -21,3 +21,31 @@ const courseSchema = new Schema({
 const courseModel = mongoose.model('course', courseSchema);
 
 module.exports = courseModel;
+
+// {
+//   "courseName": "name",
+//   "owner_id": "_id",
+//   "description": "desc",
+//   "password": "1234",
+//   "modules": [
+//     {
+//       "name": "String",
+//       "idx": "Number",
+//       "lessonText": "String",
+//       "Img": "String",
+//       "questions": [
+//         {
+//           "questionText": "test",
+//           "answer": "true",
+//           "answerArray": [
+//             "test",
+//             "test",
+//             "test",
+//             "true"
+//             ]
+//         }
+//       ]
+//     }
+//   ],
+//   "activeCourses": []
+// }
