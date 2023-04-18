@@ -8,6 +8,7 @@ const handle500 = require('./error-handlers/500.js');
 const handle404 = require('./error-handlers/404.js');
 //Routes
 const userRoutes = require('./routes/userRoutes');
+const courseRouter = require('./routes/courseRoutes.js');
 //Our Express app
 const app = express();
 
@@ -16,10 +17,7 @@ app.use(cors());
 app.use(express.json());
 //actually use routes
 app.use(userRoutes);
-//base route
-app.use('/', (req, res) => {
-  res.status(200).send('Server Online');
-});
+app.use(courseRouter);
 //error handlers
 app.use(handle404);
 app.use(handle500);
