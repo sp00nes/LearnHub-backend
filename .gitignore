@@ -4,7 +4,7 @@ db
 temp
 build
 memory
-
+.vscode/
 # Sequelize CLI
 config.json
 
