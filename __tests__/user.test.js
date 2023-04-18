@@ -27,13 +27,13 @@ describe('The userRouter', () => {
   });
 
   it('can get a user', async () => {
-    const record = await client.get('/user/testerId1234');
+    const record = await client.get('/user/test@gmail.com');
     expect(record.body.userName).toBe('tester');
     expect(record.body.password).toBe('pass1234');
   });
 
   it('can update a user', async () => {
-    const record = await client.get('/user/testerId1234');
+    const record = await client.get('/user/test@gmail.com');
     record.body.userName = 'Tested';
     const updated = await client.put('/user/testerId1234').send(record.body);
     expect(updated.body.userName).toBe('Tested');

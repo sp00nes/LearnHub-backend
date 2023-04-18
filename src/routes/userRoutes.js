@@ -5,8 +5,8 @@ const userRouter = express.Router();
 const UserSchema = require('../model/user');
 
 //to get send id in params
-userRouter.get('/user/:id', async (req, res, next) => {
-  const user = await UserSchema.findById(req.params.id);
+userRouter.get('/user/:email', async (req, res, next) => {
+  const user = await UserSchema.findOne({ email: req.params.email});
   res.status(200).json(user);
 });
 
