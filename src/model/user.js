@@ -6,10 +6,9 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema({
   userName: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-  email: { type: String, unique: true},
-  courses: { type: Array, required: true },
-  activeCourses: [{ course_id: String, complete: Boolean }],
+  email: { type: String, unique: true },
+  courses: { type: Array },
+  activeCourses: { type: Array },
 });
 
 const userModel = mongoose.model('user', userSchema);
