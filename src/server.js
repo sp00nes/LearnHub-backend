@@ -7,7 +7,7 @@ const cors = require('cors');
 const handle500 = require('./error-handlers/500.js');
 const handle404 = require('./error-handlers/404.js');
 //Routes
-const userRoutes = require('./routes/userRoutes');
+const userRouter = require('./routes/userRoutes');
 const courseRouter = require('./routes/courseRoutes.js');
 //Our Express app
 const app = express();
@@ -16,7 +16,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 //actually use routes
-app.use(userRoutes);
+app.use(userRouter);
 app.use(courseRouter);
 //error handlers
 app.use(handle404);
